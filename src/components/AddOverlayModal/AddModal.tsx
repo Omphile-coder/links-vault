@@ -38,7 +38,7 @@ export const AddModal = ({ onClose, onSubmit, linkToEdit }: Props) => {
 
   return (
     <div className={styles.overlay} onClick={onclose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation}>
+      <div className={styles.content} onClick={(e) => e.stopPropagation}>
         //change the title of the overlay depending on the what was called
         <h2>{linkToEdit ? "Edit Link" : "Add New Link"}</h2>
         <button className={styles.closeBtn} onClick={onClose}>
