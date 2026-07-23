@@ -1,51 +1,35 @@
 import React from "react";
 import styles from "./MainContent.module.css";
 import type { LinkItem } from "../../App";
-
 import imageIcon from "../../assets/Robot-Image.png";
-import imageLogo from "../../assets/Logo.jpg";
+import emptyImg from "../../assets/notFound.jpg";
+
 type Props = {
   links: LinkItem[];
-  onOpenAdd: () => void;
   onDelete: (id: string) => void;
   onEdit: (link: LinkItem) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
 };
 
-export const MainContent = ({
-  links,
-  onOpenAdd,
-  onDelete,
-  onEdit,
-  searchQuery,
-  setSearchQuery,
-}: Props) => {
+export const MainContent = ({ links, onDelete, onEdit }: Props) => {
   return (
     <main className={styles.mainContainer}>
-      <div className={styles.leftColumn}>
+      <div className={styles.content}>
         <div className={styles.headerRow}>
-          <img src={imageLogo} alt="Bookmark logo" className={styles.logo} />
-          <h2>Link Custodian</h2>
-          <div className={styles.searchContainer}>
-            <input
-              type="text"
-              placeholder="Search tags, titles, links..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className={styles.searchInput}
-            />
-          </div>
-          <button className={styles.addBtn} onClick={onOpenAdd}>
-            Add New Link
-          </button>
+          <h2>My vault</h2>
         </div>
 
         <div className={styles.linksList}>
           {links.length === 0 ? (
-            <p className={styles.emptyState}>
-              No links saved yet. Click "Add New Link" to start your vault!
-            </p>
+            <div className={styles.emptyState}>
+              <img
+                src={emptyImg}
+                alt="No links found"
+                className={styles.emptyImage}
+              />
+              <p>
+                No links saved yet. Click "Add New Link" to start your vault!
+              </p>
+            </div>
           ) : (
             links.map((link) => (
               <div key={link.id} className={styles.linkCard}>
@@ -75,16 +59,6 @@ export const MainContent = ({
           )}
         </div>
       </div>
-
-      {/* <div className={styles.rightColumn}>
-        <div className={styles.imageWrapper}>
-          <img
-            src={imageIcon}
-            alt="AI Interface"
-            className={styles.heroImage}
-          />
-        </div>
-      </div> */}
     </main>
   );
 };

@@ -80,15 +80,13 @@ function App() {
 
   return (
     <div style={{ paddingTop: "80px", fontFamily: "sans-serif" }}>
-      {/* <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} /> */}
+      <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} onOpenAdd={openAddModal}/>
 
       <MainContent
         links={filteredLinks}
         onOpenAdd={openAddModal}
         onDelete={handleDeleteLink}
         onEdit={openEditModal}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
       />
 
       {isModalOpen && (
