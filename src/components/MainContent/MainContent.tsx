@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MainContent.module.css";
-import { LinkItem } from "../../App";
+import LinkItem from "../../App";
 import imageIcon from "../../assets/Robot-Image.png";
 
 type Props = {
