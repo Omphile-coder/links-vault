@@ -1,29 +1,49 @@
 import React from "react";
 import styles from "./MainContent.module.css";
-import LinkItem from "../../App";
-import imageIcon from "../../assets/Robot-Image.png";
+import type { LinkItem } from "../../App";
 
+import imageIcon from "../../assets/Robot-Image.png";
+import imageLogo from "../../assets/Logo.jpg";
 type Props = {
   links: LinkItem[];
   onOpenAdd: () => void;
   onDelete: (id: string) => void;
   onEdit: (link: LinkItem) => void;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
 };
 
-export const MainContent = ({ links, onOpenAdd, onDelete, onEdit }: Props) => {
+export const MainContent = ({
+  links,
+  onOpenAdd,
+  onDelete,
+  onEdit,
+  searchQuery,
+  setSearchQuery,
+}: Props) => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.leftColumn}>
         <div className={styles.headerRow}>
-          <h2>My Vault</h2>
+          <img src={imageLogo} alt="Bookmark logo" className={styles.logo} />
+          <h2>Link Custodian</h2>
+          <div className={styles.searchContainer}>
+            <input
+              type="text"
+              placeholder="Search tags, titles, links..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className={styles.searchInput}
+            />
+          </div>
           <button className={styles.addBtn} onClick={onOpenAdd}>
-            AddLink
+            Add New Link
           </button>
         </div>
 
         <div className={styles.linksList}>
           {links.length === 0 ? (
-            <p className={styles.empty}>
+            <p className={styles.emptyState}>
               No links saved yet. Click "Add New Link" to start your vault!
             </p>
           ) : (
@@ -54,17 +74,17 @@ export const MainContent = ({ links, onOpenAdd, onDelete, onEdit }: Props) => {
             ))
           )}
         </div>
-
-        <div className={styles.rightColumn}>
-          <div className={styles.imageWrapper}>
-            <img
-              src={imageIcon}
-              alt="AI bookmark Picture"
-              className={styles.heroImage}
-            />
-          </div>
-        </div>
       </div>
+
+      {/* <div className={styles.rightColumn}>
+        <div className={styles.imageWrapper}>
+          <img
+            src={imageIcon}
+            alt="AI Interface"
+            className={styles.heroImage}
+          />
+        </div>
+      </div> */}
     </main>
   );
 };

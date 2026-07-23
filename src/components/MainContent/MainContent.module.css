@@ -1,38 +1,64 @@
 .mainContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column-reverse; 
+  gap: 40px;
 }
 
 .leftColumn {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .headerRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .headerRow h2 {
-    font-size: 2rem;
-    margin: 0;
+  font-size: 2rem;
+  margin: 0;
 }
-.addBtn{
-      background-color: #111111;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background-color 0.2s ease;
+
+.logo{
+    height: 5vh;
+    border-radius: 5px;
+    gap: 5px;
+}
+.searchContainer{
+    width: 70%;
+    max-width: 250px;
+}
+
+.searchInput{
+    width: 70%;
+    padding: 10px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+    border-color: #111111;
+}
+
+
+.addBtn {
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 
 .addBtn:hover {
@@ -45,10 +71,11 @@
   gap: 15px;
 }
 
-.empty {
+.emptyState {
   color: #666666;
   font-style: italic;
 }
+
 
 .linkCard {
   background-color: #ffffff;
@@ -114,7 +141,7 @@
 }
 
 
-.rightColumn {
+/* .rightColumn {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -150,8 +177,7 @@
   border-top-left-radius: 40px;
   box-shadow: -15px -15px 0 0 white;
   z-index: 2;
-}
-
+} */
 
 /* Tablets (768px+) */
 @media (min-width: 768px) {

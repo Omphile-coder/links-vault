@@ -1,73 +1,72 @@
-.overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.content{
-    background-color: #ffffff;
-    border-radius: 16px;
-    width: 100%;
-    max-width: 500px;
-    padding: 30px;
-    box-shadow: 0 10px 25pxrgba(0,0,0,0.2);
-    animation: slideUp 0.3s ease-out;
+.modalContent {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-out;
 }
 
 @keyframes slideUp {
-    from{opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.modalHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .modalHeader h2 {
-margin: 0;
-font-size: 1.5rem;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-.closeBtn{
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #666;
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
 }
 
-.closeBtn:hover{
-
-    color: #000;
+.closeBtn:hover {
+  color: #000;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.inputGroup{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.inputGroup label{
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #333;
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .inputGroup input,
