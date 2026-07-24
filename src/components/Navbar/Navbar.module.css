@@ -1,6 +1,6 @@
 .navContainer{
     position: fixed;
-    top: 5px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
     height: 60px;
