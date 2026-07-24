@@ -3,6 +3,7 @@ import styles from "./MainContent.module.css";
 import type { LinkItem } from "../../App";
 import imageIcon from "../../assets/Robot-Image.png";
 import emptyImg from "../../assets/notFound.jpg";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 type Props = {
   links: LinkItem[];
@@ -16,7 +17,9 @@ export const MainContent = ({ links, onDelete, onEdit, onOpenAdd }: Props) => {
     <main className={styles.mainContainer}>
       <div className={styles.content}>
         <div className={styles.headerRow}>
-          <h2>Your Bookmarks</h2>
+          <h2>
+            Your Bookmarks <i className="bi bi-bookmark-heart-fill"></i>
+          </h2>
         </div>
 
         <div className={styles.linksList}>
