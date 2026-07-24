@@ -8,14 +8,15 @@ type Props = {
   links: LinkItem[];
   onDelete: (id: string) => void;
   onEdit: (link: LinkItem) => void;
+  onOpenAdd: () => void;
 };
 
-export const MainContent = ({ links, onDelete, onEdit }: Props) => {
+export const MainContent = ({ links, onDelete, onEdit, onOpenAdd }: Props) => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.content}>
         <div className={styles.headerRow}>
-          <h2>My vault</h2>
+          <h2>Your Bookmarks</h2>
         </div>
 
         <div className={styles.linksList}>
@@ -28,6 +29,11 @@ export const MainContent = ({ links, onDelete, onEdit }: Props) => {
               />
               <p>
                 No links saved yet. Click "Add New Link" to start your vault!
+              </p>
+              <p>
+                <button className={styles.addBtn} onClick={onOpenAdd}>
+                  Add New Link
+                </button>
               </p>
             </div>
           ) : (

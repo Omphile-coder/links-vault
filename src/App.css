@@ -1,0 +1,11 @@
+html{
+
+    background-color: #DCE2EB; 
+
+  background-image: linear-gradient(
+    to bottom, 
+    #E9EEF5 0%,  
+    #DCE2EB 50%, 
+    #C8D3E0 100% 
+  );
+}
