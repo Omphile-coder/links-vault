@@ -57,7 +57,7 @@ export const MainContent = ({ links, onDelete, onEdit, onOpenAdd }: Props) => {
                   </button>
 
                   <button
-                    className={styles.actionBtn}
+                    className={styles.editBtn}
                     onClick={() => onDelete(link.id)}
                   >
                     Delete
