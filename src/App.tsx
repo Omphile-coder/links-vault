@@ -5,7 +5,7 @@ import { MainContent } from "./components/MainContent/MainContent";
 import { AddModal } from "./components/AddOverlayModal/AddModal";
 import { ContentContainer } from "./components/ContentContainer/ContentContainer";
 import { Confirmation } from "./components/Confirmation/Confirmation";
-import ButtonConfirm  from "./components/ButtonConfirmation/ButtonConfirm";
+import { ButtonConfirm } from "./components/ButtonConfirmation/ButtonConfirm";
 
 export interface LinkItem {
   id: string;
@@ -35,7 +35,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("vaultLinks", JSON.stringify(links));
   }, [links]);
-
 
   const showConfirmation = (message: string, type: "success" | "error") => {
     setConfirmation({ message, type });
@@ -67,7 +66,6 @@ function App() {
   const handleDeleteLink = (id: string) => {
     setDeleteId(id);
   };
-
 
   const confirmDelete = () => {
     if (!deleteId) return;
@@ -125,7 +123,6 @@ function App() {
           />
         )}
 
-
         {deleteId && (
           <ButtonConfirm
             title="Delete Link"
@@ -134,7 +131,6 @@ function App() {
             onCancel={() => setDeleteId(null)}
           />
         )}
-
 
         {confirmation && (
           <Confirmation
