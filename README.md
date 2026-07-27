@@ -65,3 +65,5 @@ All links are stored locally in your browser using the Local Storage API under t
 *   Import / Export links functionality
 *   Sorting options (by date added, alphabetical, etc.)
 *   Automatic website favicon fetching
+## Deployed using Vercel:
+*   [Link](https://links-vault-nine.vercel.app/)
