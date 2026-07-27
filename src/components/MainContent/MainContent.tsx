@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./MainContent.module.css";
 import type { LinkItem } from "../../App";
 import imageIcon from "../../assets/Robot-Image.png";
-import emptyImg from "../../assets/notFound.jpg";
+import emptyImg from "../../assets/notFound.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 type Props = {
@@ -10,9 +10,16 @@ type Props = {
   onDelete: (id: string) => void;
   onEdit: (link: LinkItem) => void;
   onOpenAdd: () => void;
+  searchQuery: string;
 };
 
-export const MainContent = ({ links, onDelete, onEdit, onOpenAdd }: Props) => {
+export const MainContent = ({
+  links,
+  onDelete,
+  onEdit,
+  onOpenAdd,
+  searchQuery,
+}: Props) => {
   return (
     <main className={styles.mainContainer}>
       <div className={styles.content}>
@@ -30,14 +37,25 @@ export const MainContent = ({ links, onDelete, onEdit, onOpenAdd }: Props) => {
                 alt="No links found"
                 className={styles.emptyImage}
               />
-              <p>
-                No links saved yet. Click "Add New Link" to start your vault!
-              </p>
-              <p>
-                <button className={styles.addBtn} onClick={onOpenAdd}>
-                  Add New Link
-                </button>
-              </p>
+
+              {searchQuery ? (
+                <p>
+                  No results found for "{searchQuery}". Try a different keyword
+                  or term
+                </p>
+              ) : (
+                <>
+                  <p>
+                    No links saved yet. Click "Add New Link" to start your
+                    vault!
+                  </p>
+                  <p>
+                    <button className={styles.addBtn} onClick={onOpenAdd}>
+                      Add New Link
+                    </button>
+                  </p>
+                </>
+              )}
             </div>
           ) : (
             links.map((link) => (

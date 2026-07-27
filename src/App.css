@@ -1,6 +1,13 @@
-html{
-
+html {
     background-color: #DCE2EB; 
+}
 
-  
+.app-wrapper{
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+    .app-wrapper {
+        padding-top: 200px; 
+    }
 }

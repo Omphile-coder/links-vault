@@ -1,10 +1,11 @@
 .navContainer{
     position: fixed;
+    max-width: 1200px;    
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
     height: 60px;
-    width: 65%;
+    width: 70%;
     background-color: white;
     z-index: 100;
     border-radius: 60px;
@@ -75,21 +76,22 @@
 }
 
 
-.logo{
-    height: 10vh;
+.logo {
+    height: 40px; 
     border-radius: 5px;
-    gap: 5px;
 }
 
-@media screen and (max-width: 768px) {
-    .content{
+@media screen and (max-width: 1200px) {
+    .content {
         flex-direction: column;
         justify-content: center;
-        gap: 10px;
+        gap: 15px; 
+        padding: 15px 20px; 
     }
 
-    .navContainer{
-        height: 110px;
+    .navContainer {
+        height: auto; 
+        border-radius: 20px;
+        padding: 10px 0;
     }
-    
 }
