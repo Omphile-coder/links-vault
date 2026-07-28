@@ -149,7 +149,7 @@
   transition: all 0.2s;
 }
 
-.editBtn{
+.deleteBtn{
   color: red;
   background: none;
   border: 1px solid #cccccc;
@@ -166,10 +166,11 @@
   font-weight: 700;
 }
 
-.editBtn:hover {
-  background-color: red;
-  color: #ffffff;
-  border-color: #111111;
+.deleteBtn:hover {
+  background-color:white;
+
+  color: red;
+  border-color: red;
   font-weight: 700;
 }
 

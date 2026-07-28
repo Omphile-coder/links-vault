@@ -75,7 +75,7 @@ export const MainContent = ({
                   </button>
 
                   <button
-                    className={styles.editBtn}
+                    className={styles.deleteBtn}
                     onClick={() => onDelete(link.id)}
                   >
                     Delete
