@@ -31,7 +31,7 @@ Built with React, TypeScript, and CSS Modules, the application allows users to a
 - CSS Modules
 - Vite
 - Bootstrap Icons
-- Local Storage API
+- Local Storage 
 
 ## Responsive Design
 
